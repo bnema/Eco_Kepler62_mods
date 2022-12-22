@@ -350,4 +350,32 @@ namespace Eco.Mods.TechTree
             RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
         }
     }
+
+    public partial class AnimalHusbandrySkillBookRecipe
+    {
+        partial void ModsPreInitialize()
+        {
+            Recipes[0].Items.Clear();
+            Recipes[0].Items.Add(new CraftingElement<AnimalHusbandrySkillScroll>(NMBSettings.OutputAmount));
+        }
+
+        partial void ModsPostInitialize()
+        {
+            RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
+        }
+    }
+
+    public partial class MixologySkillBookRecipe
+    {
+        partial void ModsPreInitialize()
+        {
+            Recipes[0].Items.Clear();
+            Recipes[0].Items.Add(new CraftingElement<MixologySkillScroll>(NMBSettings.OutputAmount));
+        }
+
+        partial void ModsPostInitialize()
+        {
+            RecipeName = $"{Recipes[0].Name.AddSpacesBetweenCapitals()} Skill Scroll";
+        }
+    }
 }
